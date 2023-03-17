@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- HEADING -->
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+    <main>
+<!-- TASK ENTRY -->
+        <section class="task-entry">
+                <form id="form">
+                    <input type="text" placeholder="What's your Task??" name="task" id="task">
+                    <input type="button" class="task-create" value="Create Task" onclick="create()">
+                </form>
+        </section>
+<!-- TASK LIST -->
+        <section class="task-list">
+            <h4>Task List</h4>
+            <div id="tasks">
+                
+            </div>
+        </section>
+<!-- TASKS COMPLETED -->
+        <section>
+            <h4>Tasks Completed</h4>
+             <div id="comp_task">
+                
+             </div>
+        </section>
+    </main>
+<script src="main.js"></script>
+</body>
+</html>
