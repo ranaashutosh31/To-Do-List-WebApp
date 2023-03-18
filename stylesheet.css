@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(rgb(183, 59, 194,0.8), rgb(60, 0, 121,0.99));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+.task-entry{
+    text-align: center;
+}
+.task-list{
+    text-align: center;
+}
+.comp-list{
+    text-align: center;
+}
