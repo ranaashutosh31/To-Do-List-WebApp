@@ -46,7 +46,7 @@ function create() {
                 task_input.setAttribute("readonly","readonly");
             }
         })
-// DELETE BUTTON
+// DELETE BUTTON FOR TASK LIST
         var del = document.createElement("button");
         del.classList.add("delete");
         del.value = "Delete";
