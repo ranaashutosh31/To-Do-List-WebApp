@@ -1,7 +1,21 @@
+:root {
+    --dark:#374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray:#6B7280;
+    --light:#EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+}
+*{
+	font-family: "Fira sans", sans-serif;
+}
 body{
-    background: linear-gradient(rgb(183, 59, 194,0.8), rgb(60, 0, 121,0.99));
+    background: linear-gradient(var(--dark), rgba(2, 2, 2, 0.99));
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
+    color: #EEE;
 }
 h1{
     text-align: center;
@@ -17,18 +31,49 @@ h1{
 }
 input{
     border: white;
-    border-radius: 4px;
+    border-radius: 15px;
     min-height: 3vh;
-}
-.task-create, button{
-    background: linear-gradient(rgb(244, 95, 227), rgb(118, 5, 71));
+    background-color: var(--darkest);
+    padding: 0.5rem;
+    font-size: 1rem;
     color: white;
-    border: white 1px solid;
-    border-radius: 10px;
-    min-height: 3vh;
 }
+input::placeholder{
+    color: var(--gray);
+}
+input[type=text]{
+    padding: 0.5rem !important;
+    font-size: 1rem;
+    color: white;
+}
+.task-create, button, .edit{
+    background: linear-gradient( pink, purple);
+    min-height: 3vh;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: auto;
+    font-weight: 700;
+}
+.delete, .delete_1{
+    background: linear-gradient( rgb(247, 15, 53), rgb(79, 2, 2));
+    min-height: 3vh;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: auto;
+    font-weight: 700;
+}
+.done{
+    background: linear-gradient( rgb(29, 219, 39), rgb(11, 77, 24));
+    min-height: 3vh;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: auto;
+    font-weight: 700;
+}
+
 .tasks, .cl_1{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 4px;
 }
@@ -36,8 +81,9 @@ input{
     padding: 2px;
     margin: 2px;
     min-height: 3vh;
+    border: none;
 }
-.tasks input, .cl_1 input{
+.tasks input, .cl-input{
     padding: 2px;
     margin: 2px;
     min-height: 3vh;

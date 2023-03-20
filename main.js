@@ -28,7 +28,8 @@ function create() {
 // NULLIFYING TASK INPUT BOX
         
 // EDIT BUTTON
-        var edit = document.createElement("button");
+        var edit = document.createElement("input");
+        edit.setAttribute("type","button");
         edit.classList.add("edit");
         edit.value = "Edit";
         edit.innerHTML = "Edit";
@@ -47,7 +48,8 @@ function create() {
             }
         })
 // DELETE BUTTON FOR TASK LIST
-        var del = document.createElement("button");
+        var del = document.createElement("input");
+        del.setAttribute("type","button");
         del.classList.add("delete");
         del.value = "Delete";
         del.innerHTML = "Delete";
@@ -62,7 +64,8 @@ function create() {
             e.preventDefault();
         })
 // DONE BUTTON
-        var done = document.createElement("button");
+        var done = document.createElement("input");
+        done.setAttribute("type","button");
         done.classList.add("done");
         done.value = "Done";
         done.innerHTML = "Done";
@@ -85,7 +88,8 @@ function create() {
             list.removeChild(task_list);
 
 // DELETE BUTTON
-            var del_1 = document.createElement("button");
+            var del_1 = document.createElement("input");
+            del_1.setAttribute("type","button");
             del_1.classList.add("delete_1");
             del_1.value = "Delete";
             del_1.innerHTML = "Delete";
