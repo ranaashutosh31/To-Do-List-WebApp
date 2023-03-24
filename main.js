@@ -29,7 +29,8 @@ function create() {
         
 // EDIT BUTTON
         var edit = document.createElement("input");
-        edit.setAttribute("type","button");
+        edit.type= 'button';
+        //edit.setAttribute("type","button");
         edit.classList.add("edit");
         edit.value = "Edit";
         edit.innerHTML = "Edit";
@@ -37,13 +38,13 @@ function create() {
         task_list.appendChild(edit);
 
         edit.addEventListener('click', (e) =>{
-            if(edit.innerHTML == "Edit"){
-                edit.innerHTML = "Save";
+            if(edit.value == "Edit"){
+                edit.value = "Save";
                 task_input.removeAttribute("readonly");
                 task_input.focus();
             }
             else{
-                edit.innerHTML = "Edit";
+                edit.value = "Edit";
                 task_input.setAttribute("readonly","readonly");
             }
         })
@@ -81,7 +82,7 @@ function create() {
             var cl_input = document.createElement('input');
             cl_input.type = 'text';
             cl_input.classList.add('cl-input');
-            cl_input.value = task;
+            cl_input.value = task_input.value;
 
             cl_1.appendChild(cl_input);
             
@@ -97,7 +98,12 @@ function create() {
             cl_1.appendChild(del_1);
 
             del_1.addEventListener('click', (e) =>{
+                var x = confirm("Are you sure you want to delete this completed task? This action can't be reversed!!");
+            if(x==true)
             task_cl.removeChild(cl_1);
+            else
+            e.preventDefault();
+            
             })
 
         })
